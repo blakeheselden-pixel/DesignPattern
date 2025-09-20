@@ -1,12 +1,10 @@
-public class FactoryBrandB extends Company{
+public class FactoryBrandB implements SmartDeviceFactory {
     @Override
-    public SmartDeviceFactory createSmartDevice(String type){
-        SmartDeviceFactory smartDeviceFactory = null;
-        if("LOCK".equalsIgnoreCase(type)){
-            smartDeviceFactory = new SmartLockB();
-        }else{
-            smartDeviceFactory = new SmartBulbB();
-        }
-        return smartDeviceFactory;
+    public SmartBulb createSmartBulb() {
+        return new SmartBulbB();
+    }
+    @Override
+    public SmartLock createSmartLock() {
+        return new SmartLockB();
     }
 }

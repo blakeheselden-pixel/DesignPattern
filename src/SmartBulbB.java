@@ -1,6 +1,6 @@
-public class SmartBulbB implements SmartDeviceFactory{
+public class SmartBulbB implements SmartBulb{
     @Override
-    public void assemble(){
+    public void createSmartBulb(){
         System.out.println("Created smart bulb from Brand B");
     }
 }

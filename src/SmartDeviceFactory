@@ -1,3 +1,4 @@
 interface SmartDeviceFactory{
-    void assemble();
+    public SmartBulb createSmartBulb();
+    public SmartLock createSmartLock();
 }

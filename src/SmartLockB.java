@@ -1,6 +1,6 @@
-public class SmartLockB implements SmartDeviceFactory{
+public class SmartLockB implements SmartLock{
     @Override
-    public void assemble(){
+    public void createSmartLock(){
         System.out.println("Created smart lock from Brand B");
     }
 }
