@@ -1,4 +1,4 @@
-public class BrandB extends Company{
+public class FactoryBrandB extends Company{
     @Override
     public SmartDeviceFactory createSmartDevice(String type){
         SmartDeviceFactory smartDeviceFactory = null;
