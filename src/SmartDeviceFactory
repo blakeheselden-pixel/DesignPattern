@@ -1,4 +1,0 @@
-interface SmartDeviceFactory{
-    public SmartBulb createSmartBulb();
-    public SmartLock createSmartLock();
-}
