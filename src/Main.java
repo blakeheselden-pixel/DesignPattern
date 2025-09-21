@@ -4,10 +4,10 @@ public class Main {
         SmartDeviceFactory factoryBrandA = new FactoryBrandA();
 
         //Use methods from instantiated factory to create product
-        SmartBulb brandABulb = factoryBrandA.createSmartBulb(2.1);
+        SmartBulb brandABulb = factoryBrandA.createSmartBulb();
 
         //Instantiate brand factories to create product
         SmartDeviceFactory factoryBrandB = new FactoryBrandB();
-        SmartLock brandBLock = factoryBrandB.createSmartLock(1);
+        SmartLock brandBLock = factoryBrandB.createSmartLock();
     }
 }
