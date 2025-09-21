@@ -1,14 +1,14 @@
-public class SmartLockB implements SmartLock{
+public class SmartLockB implements SmartLock {
 
     private double battery;
 
     @Override
-    public void setBattery(double battery){
-        if (battery > 100){
+    public void setBattery(double battery) {
+        if (battery > 100) {
             this.battery = 100;
-        }else if (battery < 0){
+        } else if (battery < 0) {
             this.battery = 0;
-        }else{
+        } else {
             this.battery = battery;
         }
     }

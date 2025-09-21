@@ -3,6 +3,7 @@ public class FactoryBrandB implements SmartDeviceFactory {
     public SmartBulb createSmartBulb() {
         return new SmartBulbB();
     }
+
     @Override
     public SmartLock createSmartLock() {
         return new SmartLockB();

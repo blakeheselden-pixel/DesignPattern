@@ -1,4 +1,4 @@
-interface SmartDeviceFactory{
+interface SmartDeviceFactory {
     SmartBulb createSmartBulb();
 
     SmartLock createSmartLock();
