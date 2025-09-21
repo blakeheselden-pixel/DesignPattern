@@ -93,11 +93,13 @@ public class Main {
 
         //Printing both lists of Bulbs and Locks
         int i = 1, j = 1;
+        System.out.println("\n\nPrinting all smart bulbs:");
         for (SmartBulb bulb : orderBulb) {
             System.out.println("Power level of bulb " + i + " from " + bulb.getManufacturer()
                     + ": " + bulb.getPower() + "W");
             i++;
         }
+        System.out.println("\nPrinting all smart locks:");
         for (SmartLock lock : orderLock) {
             System.out.println("Battery level of lock " + j + " from " + lock.getManufacturer()
                     + ": " + lock.getBattery() + "%");
