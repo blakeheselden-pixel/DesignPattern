@@ -6,4 +6,9 @@ public class SmartLockB implements SmartLock{
     public void setBattery(double battery){
         this.battery = battery;
     }
+
+    @Override
+    public double getBattery() {
+        return this.battery;
+    }
 }
