@@ -13,22 +13,32 @@ public class Main {
     private static final SmartDeviceFactory factoryBrandA = new FactoryBrandA();
     private static final SmartDeviceFactory factoryBrandB = new FactoryBrandB();
 
-    private static void orderAssembler(String itemBrand, String itemType) {
-        if(itemBrand.equalsIgnoreCase("BRANDA") && itemType.equalsIgnoreCase("BULB")) {
-            orderBulb.add(factoryBrandA.createSmartBulb());
-        }else if(itemBrand.equalsIgnoreCase("BRANDA") && itemType.equalsIgnoreCase("LOCK")) {
-            orderLock.add(factoryBrandA.createSmartLock());
-        }else if(itemBrand.equalsIgnoreCase("BRANDB") && itemType.equalsIgnoreCase("BULB")) {
-            orderBulb.add(factoryBrandB.createSmartBulb());
-        }else if(itemBrand.equalsIgnoreCase("BRANDB") && itemType.equalsIgnoreCase("LOCK")) {
-            orderLock.add(factoryBrandB.createSmartLock());
+    private static void orderAssembler(String itemBrand, String itemType, double usageLevel) {
+        if (itemType.equalsIgnoreCase("BULB")) {
+            SmartBulb bulb;
+            if (itemBrand.equalsIgnoreCase("BRANDA")) {
+                bulb = factoryBrandA.createSmartBulb();
+            } else {
+                bulb = factoryBrandB.createSmartBulb();
+            }
+            bulb.setPower(usageLevel);
+            orderBulb.add(bulb);
+        } else if (itemType.equalsIgnoreCase("LOCK")) {
+            SmartLock lock;
+            if (itemBrand.equalsIgnoreCase("BRANDA")) {
+                lock = factoryBrandA.createSmartLock();
+            } else {
+                lock = factoryBrandB.createSmartLock();
+            }
+            lock.setBattery(usageLevel);
+            orderLock.add(lock);
         }
     }
 
     public static void main(String[] args) {
 
         Scanner userFileScanner = new Scanner(System.in);
-        Scanner userInputScanner = new Scanner(System.in);
+        //Scanner userInputScanner = new Scanner(System.in);
         File fileToRead;
 
         //Ensure correct user input through continuous prompting.
@@ -53,11 +63,22 @@ public class Main {
                 String line = fileScanner.nextLine();
                 String[] lineParts = line.split("\\s+");
 
-                if (lineParts.length == 2 && (lineParts[0].equalsIgnoreCase("BRANDA") ||
+                if (lineParts.length == 3 && (lineParts[0].equalsIgnoreCase("BRANDA") ||
                         lineParts[0].equalsIgnoreCase("BRANDB")) &&
                         (lineParts[1].equalsIgnoreCase("BULB") || lineParts[1].equalsIgnoreCase("LOCK"))) {
 
-                    orderAssembler(lineParts[0], lineParts[1]);
+                    String brand = lineParts[0];
+                    String product = lineParts[1];
+                    double level;
+
+                    try {
+                        level = Double.parseDouble(lineParts[2]);
+                    } catch (NumberFormatException e) {
+                        level = 0;
+                    }
+
+                    orderAssembler(brand, product, level);
+
                 }else{
                     System.out.println("Invalid line. Skipping.");
                 }
@@ -67,29 +88,6 @@ public class Main {
         } catch (FileNotFoundException e) {
             System.err.println("File: " + fileToRead.getName() + " does not exist");
         }
-
-        //Adding Battery/Power levels to products AFTER initialization
-        for (SmartBulb bulb : orderBulb) {
-            System.out.println("Please add a power level to your " + bulb.getManufacturer() + " bulb:");
-            double power;
-            if(userInputScanner.hasNextDouble()) {
-                power = userInputScanner.nextDouble();
-            }else{
-                power = 0;
-            }
-            bulb.setPower(power);
-        }
-        for (SmartLock lock : orderLock) {
-            System.out.println("Please add a battery level to your " + lock.getManufacturer() + " lock:");
-            double battery;
-            if(userInputScanner.hasNextDouble()) {
-                battery = userInputScanner.nextDouble();
-            }else{
-                battery = 0;
-            }
-            lock.setBattery(battery);
-        }
-        userInputScanner.close();
 
         //Printing both lists of Bulbs and Locks
         int i = 1, j = 1;
