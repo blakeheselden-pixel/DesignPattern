@@ -17,4 +17,9 @@ public class SmartLockA implements SmartLock{
     public double getBattery() {
         return this.battery;
     }
+
+    @Override
+    public String getManufacturer() {
+        return "Brand A";
+    }
 }

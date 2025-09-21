@@ -8,5 +8,4 @@ public class FactoryBrandA implements SmartDeviceFactory {
     public SmartLock createSmartLock() {
         return new SmartLockA();
     }
-
 }

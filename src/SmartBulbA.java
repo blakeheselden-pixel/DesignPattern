@@ -17,4 +17,9 @@ public class SmartBulbA implements SmartBulb {
     public double getPower() {
         return this.power;
     }
+
+    @Override
+    public String getManufacturer() {
+        return "Brand A";
+    }
 }
