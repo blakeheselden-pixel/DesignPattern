@@ -3,4 +3,7 @@ public class SmartBulbB implements SmartBulb{
     public void createSmartBulb(){
         System.out.println("Created smart bulb from Brand B");
     }
+
+    @Override
+    public void setPower(double power){}
 }

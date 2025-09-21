@@ -1,4 +1,5 @@
 interface SmartDeviceFactory{
-    SmartBulb createSmartBulb();
-    SmartLock createSmartLock();
+    SmartBulb createSmartBulb(double power);
+
+    SmartLock createSmartLock(double battery);
 }
