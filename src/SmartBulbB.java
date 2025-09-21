@@ -1,9 +1,9 @@
 public class SmartBulbB implements SmartBulb{
-    @Override
-    public void createSmartBulb(){
-        System.out.println("Created smart bulb from Brand B");
-    }
+
+    private double power;
 
     @Override
-    public void setPower(double power){}
+    public void setPower(double power){
+        this.power = power;
+    }
 }
