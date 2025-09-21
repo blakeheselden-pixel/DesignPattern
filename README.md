@@ -6,4 +6,4 @@ The second part is the test folder, which contains the files needed to run the t
 Testing Method: We used a . Should you run into any troubles getting a correct output, please take a look at our screen dumps for what you should see when you run the tests.
 
 UML Screen Capture:
-![Alt text](AbstractFactory_UML.png?raw=true "Optional Title")
+![Alt text](AbstractFactory_UML.png?raw=true "Abstract Factory UML")
