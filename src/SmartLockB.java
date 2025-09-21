@@ -4,7 +4,13 @@ public class SmartLockB implements SmartLock{
 
     @Override
     public void setBattery(double battery){
-        this.battery = battery;
+        if (battery > 100){
+            this.battery = 100;
+        }else if (battery < 0){
+            this.battery = 0;
+        }else{
+            this.battery = battery;
+        }
     }
 
     @Override

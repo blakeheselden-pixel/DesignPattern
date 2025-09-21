@@ -4,7 +4,13 @@ public class SmartBulbB implements SmartBulb{
 
     @Override
     public void setPower(double power){
-        this.power = power;
+        if(power > 1000){
+            this.power = 1000;
+        } else if (power<0) {
+            this.power = 0;
+        }else{
+            this.power = power;
+        }
     }
 
     @Override

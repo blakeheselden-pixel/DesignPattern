@@ -14,5 +14,9 @@ public class Main {
         SmartDeviceFactory factoryBrandB = new FactoryBrandB();
         SmartLock brandBLock = factoryBrandB.createSmartLock();
         brandBLock.setBattery(12);
+
+        //Testing getters and setters for concrete products
+        System.out.println("Your Brand A Smart Bulb has a power of: " + brandABulb.getPower() + "W");
+        System.out.println("Your Brand B Smart Lock has a battery of: " + brandBLock.getBattery() + "%");
     }
 }
