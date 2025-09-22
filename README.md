@@ -5,7 +5,7 @@ university (SOFE 3650). It also includes a small testing suite for testing the c
 ## Structure 
 The project is split into 2 major parts, one of which is the [src](src) folder. This folder carries all the source code 
 that runs our program. At a high level, it creates a very simple implementation of the Abstract Factory Pattern.
-The [Main](src/Main.java) Java class within the src folder allows users to run a more interactive version of the code. 
+The [Main](src/main/java/Main.java) Java class within the src folder allows users to run a more interactive version of the code. 
 You can choose the name of your file and change the contents of your file to whatever you'd like. 
 
 The second part is the test folder, which contains the files needed to run the testing suite we made for our code.
