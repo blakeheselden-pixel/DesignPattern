@@ -12,7 +12,8 @@ the code. You can choose the name of your file and change the contents of your f
 prompt the user to define items using the console and then ask them for a file. This is the file that you will
 use to give your smart devices their power/battery level after they are instantiated. If the file has extra lines of
 data, they will be skipped over. The same occurs when you have more instances of items than data; they will print out as
-uninitiated items.
+uninitiated items. We have included a starter data file called [powerandbattery](powerandbattery), feel free to modify 
+it as you wish. The data type used in the file is Java double, that are seperated by new lines.
 
 The second part is the [test](src/test) folder, which contains the files needed to run the testing suite we made for our
 code.
