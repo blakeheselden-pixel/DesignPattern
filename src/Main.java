@@ -59,7 +59,7 @@ public class Main {
         try (Scanner fileScanner = new Scanner(fileToRead)) {
 
             while (fileScanner.hasNextLine()) {
-
+                //Reading product type (Brand|Bulb/Light).
                 String line = fileScanner.nextLine();
                 String[] lineParts = line.split("\\s+");
 
@@ -70,7 +70,7 @@ public class Main {
                     String brand = lineParts[0];
                     String product = lineParts[1];
                     double level;
-
+                    //Reading Power/Battery
                     try {
                         level = Double.parseDouble(lineParts[2]);
                     } catch (NumberFormatException e) {
