@@ -50,10 +50,17 @@ To run our program, download our repo as a zip or clone it to your local Java co
 from the test folder or to run from the Main class. Running from the Main class allows for a more interactive
 experience.
 
-> ### UML Diagram Screen Capture:
->
->![Alt text](screencaptures/AbstractFactory_UML.png?raw=true "Abstract Factory UML")
+> ## UML Diagram Screen Capture:
+> ![Alt text](screencaptures/AbstractFactory_UML.png?raw=true "Abstract Factory UML")
 
-> ### Screen dumps of tests
->
-> 
+> ## Screen dumps of tests
+> #### Assignment Test Example
+>![Alt text](screencaptures/AssignmentExamplesTestSuccess_Screenshot.png?raw=true "Assignment Test Example")
+> #### Factory Brand A Test
+>![Alt text](screencaptures/FactoryBrandATestSuccess_Screenshot.png?raw=true "Factory Brand A Test")
+> #### Factory Brand B Test
+>![Alt text](screencaptures/FactoryBrandBTestSuccess_Screenshot.png?raw=true "Factory Brand B Test")
+> #### Smart Bulb Objects Test
+>![Alt text](screencaptures/SmartBulbTestSuccess_Screenshot.png?raw=true "Smart Bulb Objects Test")
+> #### Smart Lock Objects Test
+>![Alt text](screencaptures/SmartLockTestSuccess_Screenshot.png?raw=true "Smart Lock Objects Test")
