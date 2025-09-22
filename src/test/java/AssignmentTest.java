@@ -8,13 +8,13 @@ class AssignmentExamplesTest {
         // Example 1: Bulb from Brand A
         SmartBulb aBulb = new FactoryBrandA().createSmartBulb(); // or createBulb()
         assertNotNull(aBulb);
-        assertTrue(aBulb instanceof SmartBulbA);
+        assertInstanceOf(SmartBulbA.class, aBulb);
         assertEquals("Brand A", aBulb.getManufacturer());
 
         // Example 2: Lock from Brand B
         SmartLock bLock = new FactoryBrandB().createSmartLock(); // or createLock()
         assertNotNull(bLock);
-        assertTrue(bLock instanceof SmartLockB);
+        assertInstanceOf(SmartLockB.class, bLock);
         assertEquals("Brand B", bLock.getManufacturer());
     }
 }

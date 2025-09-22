@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    //For storing the user's powerandbattery.
+    //For storing the user's items.
     private static final ArrayList<SmartBulb> orderBulb = new ArrayList<>();
     private static final ArrayList<SmartLock> orderLock = new ArrayList<>();
 
