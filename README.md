@@ -11,6 +11,14 @@ You can choose the name of your file and change the contents of your file to wha
 The second part is the test folder, which contains the files needed to run the testing suite we made for our code.
 
 ## Testing Method
+This project includes a suite of JUnit 5 test classes located in src/test/java. The tests are made to validate the devices behave as expected and implementation of the Abstract Factory Pattern is done correctly.
+Test Classes:
+FactoryBrandATest - Verifies that FactoryBrandA creates SmartBulbA and SmartLockA. Ensures created objects are not null and have the correct manufacturer
+FactoryBrandBTest - Verifies that FactoryBrandB creates SmartBulbB and SmartLockB. Ensures created objects are not null and have the correct manufacturer
+SmartBulbTest - Confirms that bulb from each factory are of the correct subtype (SmartbulbA/SmartBulbB). Validates manufacturer branding strings.
+SmartLockTest - Confirms that locks from each factory are of the correct subtype (SmartLockA/SmartLockB). Validates manufacturer brandin strings.
+AssignmentTest - End to end test covering the two required assignment cases; Creating a Brand A Buld from FactoryBrandA, Creating a Brand B Lock from FactoryBrandB. Verifies correct instantiation, subtype, and manufacturer.
+
 We used a . Should you run into any troubles getting a correct output, please take a look at our screen dumps for what 
 you should see when you run the tests.
 
