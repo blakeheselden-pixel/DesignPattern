@@ -1,6 +1,6 @@
 public class SmartBulbB implements SmartBulb {
 
-    private double power;
+    private double power = -1;
 
     @Override
     public void setPower(double power) {

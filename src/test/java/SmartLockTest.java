@@ -6,14 +6,14 @@ class SmartLockTest {
     @Test
     void smartLockA_isCorrectSubtypeAndBrand() {
         SmartLock lock = new FactoryBrandA().createSmartLock();
-        assertTrue(lock instanceof SmartLockA);
+        assertInstanceOf(SmartLockA.class, lock);
         assertEquals("Brand A", lock.getManufacturer());
     }
 
     @Test
     void smartLockB_isCorrectSubtypeAndBrand() {
         SmartLock lock = new FactoryBrandB().createSmartLock();
-        assertTrue(lock instanceof SmartLockB);
+        assertInstanceOf(SmartLockB.class, lock);
         assertEquals("Brand B", lock.getManufacturer());
     }
 

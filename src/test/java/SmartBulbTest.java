@@ -6,14 +6,14 @@ class SmartBulbTest {
     @Test
     void smartBulbA_isCorrectSubtypeAndBrand() {
         SmartBulb bulb = new FactoryBrandA().createSmartBulb();
-        assertTrue(bulb instanceof SmartBulbA);
+        assertInstanceOf(SmartBulbA.class, bulb);
         assertEquals("Brand A", bulb.getManufacturer());
     }
 
     @Test
     void smartBulbB_isCorrectSubtypeAndBrand() {
         SmartBulb bulb = new FactoryBrandB().createSmartBulb();
-        assertTrue(bulb instanceof SmartBulbB);
+        assertInstanceOf(SmartBulbB.class, bulb);
         assertEquals("Brand B", bulb.getManufacturer());
     }
 

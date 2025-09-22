@@ -1,6 +1,6 @@
 public class SmartLockA implements SmartLock{
 
-    private double battery;
+    private double battery = -1;
 
     @Override
     public void setBattery(double battery) {
